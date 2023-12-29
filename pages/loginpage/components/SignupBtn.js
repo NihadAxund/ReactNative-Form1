@@ -1,19 +1,18 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
 
-export default function SignupBtn({title}) {
+export default function SignupBtn({ title, onPress }) {
     return (
-        <TouchableOpacity style={styles.btn}>
-            <Text style={styles.buttonText}>{title}</Text>
-        </TouchableOpacity>
-    )
-}
-
+      <TouchableOpacity style={styles.btn} onPress={onPress}>
+        <Text style={styles.buttonText}>{title}</Text>
+      </TouchableOpacity>
+    );
+  }
 
 const styles = StyleSheet.create({
     btn: {
-        width:"auto",
-        backgroundColor: '#6C3483 ',
+
+        backgroundColor: '#6C3483',
         padding: 10,
         paddingLeft: 15,
         paddingRight: 15,
